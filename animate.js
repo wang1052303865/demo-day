@@ -245,7 +245,7 @@ $(function(){
 			increase(0)
 		});
 		//调试
-		$('.content').addClass('hidden');
-		$('.item-view').show()
+		// $('.content').addClass('hidden');
+		// $('.item-view').show()
 	})();
 })

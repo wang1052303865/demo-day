@@ -437,6 +437,20 @@ body {
 	animation: fall 2s ease-out forwards;
 	-webkit-animation: fall 2s ease-out forwards;
 }
+@keyframes fall {
+	0% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	30% {
+		opacity: .8;
+	}
+	100% {
+		transform: translateY(200%);
+		opacity: 0;
+		visibility: hidden;
+	}
+}
 @-webkit-keyframes fall {
 	0% {
 		-webkit-transform: translateY(0);
@@ -455,6 +469,10 @@ body {
 	animation: fadeOut 2.8s forwards;
 	-webkit-animation: fadeOut 2.8s forwards;
 }
+@keyframes fadeOut {
+	0%,70% {opacity: 1;}
+	100% {opacity: 0;visibility: hidden;}
+}
 @-webkit-keyframes fadeOut {
 	0%,70% {opacity: 1;}
 	100% {opacity: 0;visibility: hidden;}
@@ -462,6 +480,12 @@ body {
 .zoom {
 	animation: clone-zoom 3s forwards;
 	-webkit-animation: clone-zoom 3s forwards;
+}
+@keyframes clone-zoom {
+	0%,66% {
+		opacity: 0;
+		width: ;
+	}
 }
 @-webkit-keyframes clone-zoom {
 	0%,66% {
@@ -521,6 +545,23 @@ body {
 	animation: moveX 3s ease-in 0 infinite;
 	-webkit-animation: moveX 3s ease-in 0 infinite;
 }
+@keyframes moveX {
+	0%,90% {
+		transform: translate(0,0);
+	}
+	92.5% {
+		transform: translate(10px,0);
+	}
+	95% {
+		transform: translate(0,0);
+	}
+	97.5% {
+		transform: translate(10px,0);
+	}
+	100% {
+		transform: translate(0,0);
+	}
+}
 @-webkit-keyframes moveX {
 	0%,90% {
 		-webkit-transform: translate(0,0);
@@ -562,8 +603,17 @@ body {
 }
 .increase {
 	background: #47E3FF;
+	animation: increase 2s;
 	-webkit-animation: increase 2s;
 }
+@keyframes increase {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 100%;
+	}
+} 
 @-webkit-keyframes increase {
 	0% {
 		width: 0%;
@@ -575,7 +625,16 @@ body {
 
 
 .step-2 {
+	animation: step-2 1s forwards;
 	-webkit-animation: step-2 1s forwards;
+}
+@keyframes step-2 {
+	0% {
+		transform: translate(0,0);
+	}
+	100% {
+		transform: translate(200%,0);
+	}
 }
 @-webkit-keyframes step-2 {
 	0% {
